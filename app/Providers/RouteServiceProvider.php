@@ -17,6 +17,8 @@ class RouteServiceProvider extends ServiceProvider
      *
      * @var string
      */
+
+    //default è dashboard, si modifica in base a quale uri si vuol essere reindirizzati dopo il login
     public const HOME = '/admin';
 
     /**
