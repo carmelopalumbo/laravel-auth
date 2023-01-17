@@ -22,6 +22,7 @@
 <body>
     <div id="app">
         @include('partials.header')
+        <h4 class="text-center pt-3">SEZIONE ADMIN</h4>
         <main>
             @yield('content')
         </main>
