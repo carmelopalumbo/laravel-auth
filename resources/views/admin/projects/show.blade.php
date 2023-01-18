@@ -11,7 +11,7 @@
                         <h5 class="card-title text-center py-3">{{ $project->name }}</h5>
                         <p class="card-text">{{ $project->summary }}</p>
                         <div class="d-flex justify-content-center py-3">
-                            <a href="#" class="btn btn-warning mx-3">MODIFICA</a>
+                            <a href="{{ route('admin.projects.edit', $project) }}" class="btn btn-warning mx-3">MODIFICA</a>
                             <a href="#" class="btn btn-danger">ELIMINA</a>
                         </div>
                     </div>

@@ -27,7 +27,7 @@
                                 <td>
                                     <a class="btn btn-info" href="{{ route('admin.projects.show', $project) }}"><i
                                             class="fa-regular fa-eye"></i></a>
-                                    <a class="btn btn-warning mx-2" href=""><i
+                                    <a class="btn btn-warning mx-2" href="{{ route('admin.projects.edit', $project) }}"><i
                                             class="fa-regular fa-pen-to-square"></i></a>
                                     <a class="btn btn-danger" href=""><i class="fa-solid fa-trash"></i></a>
                                 </td>
