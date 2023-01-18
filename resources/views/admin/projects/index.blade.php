@@ -29,7 +29,7 @@
                                             class="fa-regular fa-eye"></i></a>
                                     <a class="btn btn-warning mx-2" href="{{ route('admin.projects.edit', $project) }}"><i
                                             class="fa-regular fa-pen-to-square"></i></a>
-                                    <a class="btn btn-danger" href=""><i class="fa-solid fa-trash"></i></a>
+                                    @include('admin.projects.delete-form')
                                 </td>
                             </tr>
                         @empty
