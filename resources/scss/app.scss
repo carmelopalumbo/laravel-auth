@@ -7,3 +7,18 @@ header{
 .option-box{
     height: calc(100vh - 68px);
 }
+
+aside{
+    ul{
+        list-style: none;
+        li{
+            a{
+                i{
+                    font-size: .6rem;
+                }
+                text-decoration: none;
+                color: white;
+            }
+        }
+    }
+}
