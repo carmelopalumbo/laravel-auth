@@ -15,7 +15,7 @@ class ProjectController extends Controller
      */
     public function index()
     {
-        $my_projects = Project::paginate(7);
+        $my_projects = Project::orderBy('id', 'desc')->paginate(7);
         return view('admin.projects.index', compact('my_projects'));
     }
 
@@ -26,7 +26,7 @@ class ProjectController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.projects.create');
     }
 
     /**
@@ -37,7 +37,17 @@ class ProjectController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $form_data = $request->all();
+
+        $form_data['slug'] = Project::generateSlug($form_data['name']);
+
+        $new_project = new Project();
+        $new_project->slug = $form_data['slug'];
+
+        $new_project->fill($form_data);
+        $new_project->save();
+
+        return redirect(route('admin.projects.show', $new_project));
     }
 
     /**
@@ -57,9 +67,9 @@ class ProjectController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Project $project)
     {
-        //
+        return view('admin.projects.edit', compact('project'));
     }
 
     /**

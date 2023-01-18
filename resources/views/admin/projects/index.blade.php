@@ -7,7 +7,7 @@
             <div class="col-10">
                 <h3 class="text-center py-4">I MIEI PROGETTI</h3>
                 <div class="text-center pb-4">
-                    <a class="btn btn-success" href="">AGGIUNGI PROGETTO</a>
+                    <a class="btn btn-success" href="{{ route('admin.projects.create') }}">AGGIUNGI PROGETTO</a>
                 </div>
 
 
