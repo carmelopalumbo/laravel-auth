@@ -5,7 +5,7 @@
         <div class="row">
             @include('admin.partials.aside')
             <div class="col-10">
-                <h3 class="text-center py-4">I MIEI PROGETTI</h3>
+                @include('admin.projects.partials.sessions')
                 <div class="text-center pb-4">
                     <a class="btn btn-success" href="{{ route('admin.projects.create') }}">AGGIUNGI PROGETTO</a>
                 </div>
@@ -29,7 +29,7 @@
                                             class="fa-regular fa-eye"></i></a>
                                     <a class="btn btn-warning mx-2" href="{{ route('admin.projects.edit', $project) }}"><i
                                             class="fa-regular fa-pen-to-square"></i></a>
-                                    @include('admin.projects.delete-form')
+                                    @include('admin.projects.partials.delete-form')
                                 </td>
                             </tr>
                         @empty

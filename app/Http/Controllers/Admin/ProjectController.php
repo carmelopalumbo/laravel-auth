@@ -47,7 +47,7 @@ class ProjectController extends Controller
         $new_project->fill($form_data);
         $new_project->save();
 
-        return redirect(route('admin.projects.show', $new_project));
+        return redirect(route('admin.projects.index'))->with('create', "<strong>$new_project->name</strong> aggiunto al database.");
     }
 
     /**
@@ -91,7 +91,7 @@ class ProjectController extends Controller
 
         $project->update($form_data);
 
-        return redirect(route('admin.projects.show', $project));
+        return redirect(route('admin.projects.index'))->with('edit', "<strong>$project->name</strong> aggiornato con successo.");
     }
 
     /**
@@ -104,6 +104,6 @@ class ProjectController extends Controller
     {
         $project->delete();
 
-        return redirect(route('admin.projects.index'));
+        return redirect(route('admin.projects.index'))->with('create', "<strong>$project->name</strong> eliminato dal database.");
     }
 }
