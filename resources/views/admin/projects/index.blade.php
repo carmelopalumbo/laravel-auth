@@ -46,3 +46,7 @@
         </div>
     </div>
 @endsection
+
+@section('title')
+    Progetti
+@endsection

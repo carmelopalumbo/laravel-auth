@@ -1,5 +1,5 @@
 <aside class="col-2 bg-dark text-white option-box shadow-sm text-center pt-5">
-    <ul>
+    <ul class="fw-bold">
         <li class="pb-5">
             <a href="{{ route('admin.dashboard') }}">HOME</a>
         </li>

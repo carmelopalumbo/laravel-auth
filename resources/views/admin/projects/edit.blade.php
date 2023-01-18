@@ -38,3 +38,7 @@
         </div>
     </div>
 @endsection
+
+@section('title')
+    Modifica
+@endsection

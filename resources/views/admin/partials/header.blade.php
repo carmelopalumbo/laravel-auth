@@ -3,7 +3,7 @@
         <div class="container-fluid mx-1">
             <a class="navbar-brand d-flex align-items-center text-white" href="{{ url('/') }}">
                 <div class="fw-bold">
-                    MY PORTFOLIO
+                    <img class="my-logo" src="{{ Vite::asset('resources/image/logo.png') }}" alt="">
                 </div>
             </a>
 

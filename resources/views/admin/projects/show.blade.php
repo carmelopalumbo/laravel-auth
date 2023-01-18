@@ -12,11 +12,20 @@
                         <p class="card-text">{{ $project->summary }}</p>
                         <div class="d-flex justify-content-center py-3">
                             <a href="{{ route('admin.projects.edit', $project) }}" class="btn btn-warning mx-3">MODIFICA</a>
-                            <a href="#" class="btn btn-danger">ELIMINA</a>
+                            <form onsubmit="return confirm('Confermi l\'eliminazione di {{ $project->name }} ?')"
+                                class="d-inline" method="POST" action="{{ route('admin.projects.destroy', $project) }}">
+                                @csrf
+                                @method('DELETE')
+                                <button class="btn btn-danger" type="submit">ELIMINA</button>
+                            </form>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+@endsection
+
+@section('title')
+    {{ $project->name }}
 @endsection

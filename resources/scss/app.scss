@@ -1,5 +1,9 @@
 @import '~bootstrap/scss/bootstrap';
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,400;0,600;0,900;1,200;1,400;1,600;1,900&display=swap');
 
+body{
+    font-family: 'Source Sans Pro', sans-serif;
+}
 header{
     height: 68px;
 }
@@ -30,4 +34,8 @@ table{
 .thumb{
     width: 20rem;
     margin: 10px auto;
+}
+
+.my-logo{
+    width: 55px;
 }
