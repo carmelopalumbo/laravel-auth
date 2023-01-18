@@ -1,11 +1,6 @@
-<aside class="col-2 bg-dark text-white option-box shadow-sm text-center pt-5">
-    <ul class="fw-bold">
-        <li class="pb-5">
-            <a href="{{ route('admin.dashboard') }}">HOME</a>
-        </li>
-
-        <li class="pb-5">
-            <a href="{{ route('admin.projects.index') }}">PROGETTI</a>
-        </li>
-    </ul>
+<aside class="col-2 bg-dark text-white option-box pt-5 container-fluid">
+    <div class="text-center links fw-bold">
+        <a class="d-block pb-5" href="{{ route('admin.dashboard') }}">HOME</a>
+        <a class="d-block" href="{{ route('admin.projects.index') }}">PROGETTI</a>
+    </div>
 </aside>
