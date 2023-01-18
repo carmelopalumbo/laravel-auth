@@ -1,1 +1,9 @@
-@import '~bootstrap/scss/bootstrap'
+@import '~bootstrap/scss/bootstrap';
+
+header{
+    height: 68px;
+}
+
+.option-box{
+    height: calc(100vh - 68px);
+}

@@ -16,7 +16,6 @@
 </head>
 
 <body>
-    @include('partials.header')
 
     <h4 class="text-center pt-3">SEZIONE GUEST</h4>
 

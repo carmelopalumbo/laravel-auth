@@ -17,7 +17,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 //rotta della home con controller dedicato
-Route::get('/', [PageController::class, 'index']);
+Route::get('/', [PageController::class, 'index'])->name('home');
 
 
 //controlli con middleware (protezione dati) per la sezione admin con aggiunta di prefix e name
