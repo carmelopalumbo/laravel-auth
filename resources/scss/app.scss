@@ -39,3 +39,20 @@ table{
 .my-logo{
     width: 55px;
 }
+
+.pag-box{
+    margin-top: 10px;
+    .pagination{
+        .page-item{
+            margin: 0 4px;
+            .page-link{
+                border: none;
+                background-color: #212529;
+                color: white;
+                font-weight: bold;
+                border-radius: 10px;
+                font-size: .9rem;
+            }
+        }
+    }
+}

@@ -7,7 +7,7 @@
             <div class="col-10">
                 @include('admin.projects.partials.sessions')
                 <div class="text-center pb-4">
-                    <a class="btn btn-success" href="{{ route('admin.projects.create') }}">AGGIUNGI PROGETTO</a>
+                    <a class="btn btn-success fw-bold" href="{{ route('admin.projects.create') }}">AGGIUNGI PROGETTO</a>
                 </div>
 
 
@@ -38,7 +38,7 @@
                     </tbody>
                 </table>
 
-                <div class="pt-3 d-flex justify-content-center">
+                <div class="pt-3 d-flex justify-content-center pag-box">
                     {{ $my_projects->links() }}
                 </div>
 
