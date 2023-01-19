@@ -18,8 +18,8 @@ return new class extends Migration
             $table->string('name', 100);
             $table->string('slug', 110)->unique();
             $table->string('client_name', 100);
-            $table->text('summary')->nullable();
-            $table->string('cover_image')->nullable();
+            $table->text('summary');
+            $table->string('cover_image');
             $table->timestamps();
         });
     }

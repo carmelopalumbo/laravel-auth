@@ -33,6 +33,7 @@ aside{
 
     .active{
         color: #C52133 !important;
+        -webkit-text-stroke: .3px white;
     }
 }
 
@@ -72,4 +73,12 @@ form{
         font-weight: bold;
         padding-left: 7px;
     }
+}
+
+.error-message{
+    color: red;
+    font-size: .8rem;
+    font-style: italic;
+    padding-left: 7px;
+    padding-top: 6px;
 }
