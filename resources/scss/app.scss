@@ -22,6 +22,18 @@ aside{
             color: white;
         }
     }
+
+    .notactive{
+        transition: .3s all;
+        padding: 7px 9px;
+        &:hover{
+            background-color: #C52133;
+        }
+    }
+
+    .active{
+        color: #C52133 !important;
+    }
 }
 
 table{
