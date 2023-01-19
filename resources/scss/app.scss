@@ -26,6 +26,7 @@ aside{
     .notactive{
         transition: .3s all;
         padding: 7px 9px;
+        border-radius: 3px;
         &:hover{
             background-color: #C52133;
         }
@@ -55,6 +56,9 @@ table{
     .pagination{
         .page-item{
             margin: 0 4px;
+            &.active .page-link{
+                background-color: #C52133 !important;
+            }
             .page-link{
                 border: none;
                 background-color: #212529;
