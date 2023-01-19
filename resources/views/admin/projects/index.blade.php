@@ -14,8 +14,14 @@
                 <table class="table table-striped w-75 m-auto">
                     <thead>
                         <tr>
-                            <th scope="col">NOME</th>
-                            <th scope="col">NOME CLIENT</th>
+                            <th scope="col">
+                                <a class="{{ $direction === 'desc' ? 'desc' : 'asc' }}"
+                                    href="{{ route('admin.orderby', ['name', $direction]) }}">NOME</a>
+                            </th>
+                            <th scope="col">
+                                <a class="{{ $direction === 'desc' ? 'desc' : 'asc' }}"
+                                    href="{{ route('admin.orderby', ['client_name', $direction]) }}">NOME CLIENT</a>
+                            </th>
                             <th scope="col">AZIONI</th>
                         </tr>
                     </thead>

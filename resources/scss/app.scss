@@ -40,6 +40,30 @@ aside{
 
 table{
     border: 1px solid black;
+    a{
+        text-decoration: none;
+        color: black;
+        transition: .3s all;
+        &:hover{
+            color: #C52133;
+        }
+    }
+    .asc{
+        &::after{
+            content: '\25B2';
+            font-size: .6rem;
+            color: #C52133;
+            padding-left: 7px;
+        }
+    }
+    .desc{
+        &::after{
+            content: '\25BC';
+            font-size: .6rem;
+            color: #C52133;
+            padding-left: 7px;
+        }
+    }
 }
 
 .thumb{
