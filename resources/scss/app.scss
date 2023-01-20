@@ -121,3 +121,49 @@ form{
         transform: scale(.85);
     }
 }
+
+.welcome{
+    -webkit-text-stroke: 1px #C52133;
+}
+
+.info-cards{
+    .cp-card{
+        border: 3px solid #C52133;
+        border-radius: 7px;
+        text-align: center;
+        width: 250px;
+        height: 110px;
+        padding: 7px 0;
+        cursor: pointer;
+        transition: .3s all;
+        h3{
+            font-size: 1.15rem;
+            font-weight: bold;
+        }
+        p{
+            color: #C52133;
+            font-style: italic;
+            font-size: 1.1rem;
+        }
+        &:hover{
+            transform: scale(1.08);
+        }
+    }
+
+}
+
+.socials{
+    padding-top: 170px;
+    i{
+        margin: 0 25px;
+        padding: 12px;
+        border-radius: 50%;
+        font-size: 2rem;
+        color: white;
+        background-color: #C52133;
+        transition: .2s all;
+        &:hover{
+            background-color: lighten(#C52133, 10%);
+        }
+    }
+}

@@ -26,7 +26,7 @@ class ProjectRequest extends FormRequest
         return [
             'name' => 'required|min:5|max:100',
             'client_name' => 'required|min:5|max:100',
-            'cover_image' => 'image|max:5242880',
+            'cover_image' => 'image|max:5000',
             'summary' => 'required|min:5',
         ];
     }

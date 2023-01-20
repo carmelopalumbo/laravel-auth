@@ -22,7 +22,7 @@
     @vite(['resources/js/app.js'])
 </head>
 
-<body>
+<body onload="startTime()">
     <div id="app">
         @include('admin.partials.header')
         <main>
