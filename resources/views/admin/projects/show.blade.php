@@ -4,7 +4,12 @@
     <div class="container-fluid">
         <div class="row">
             @include('admin.partials.aside')
-            <div class="col-10">
+            <div class="col-1 mt-5">
+                <a href="{{ route('admin.projects.index') }}">
+                    <i class="fa-solid fa-arrow-left arrow"></i>
+                </a>
+            </div>
+            <div class="col-9">
                 <div class="card m-auto mt-5" style="width: 30rem;">
                     @if ($project->cover_image)
                         <img src="{{ asset('storage/' . $project->cover_image) }}" class="card-img-top thumb"

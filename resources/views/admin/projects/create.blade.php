@@ -35,9 +35,8 @@
                     <div class="d-flex justify-content-between">
                         <div class="mb-3 w-75">
                             <label for="cover_image" class="form-label">COPERTINA</label>
-                            <input onchange="showImage(event)" type="file" value="{{ old('cover_image') }}"
-                                name="cover_image" class="form-control @error('cover_image') is-invalid @enderror"
-                                id="cover_image">
+                            <input onchange="showImage(event)" type="file" name="cover_image"
+                                class="form-control @error('cover_image') is-invalid @enderror" id="cover_image">
                             @error('cover_image')
                                 <p class="error-message">
                                     {{ $message }}

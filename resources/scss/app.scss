@@ -110,3 +110,14 @@ form{
     padding-left: 7px;
     padding-top: 6px;
 }
+
+.arrow{
+    text-decoration: none;
+    color: #212529;
+    font-size: 3.5rem;
+    padding-left: 20px;
+    transition: .2s all;
+    &:hover{
+        transform: scale(.85);
+    }
+}
