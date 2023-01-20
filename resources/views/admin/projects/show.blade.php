@@ -6,7 +6,8 @@
             @include('admin.partials.aside')
             <div class="col-10">
                 <div class="card m-auto mt-5" style="width: 30rem;">
-                    <img src="{{ $project->cover_image }}" class="card-img-top thumb" alt="{{ $project->name }}">
+                    <img src="{{ asset('storage/' . $project->cover_image) }}" class="card-img-top thumb"
+                        alt="{{ $project->image_original_name }}">
                     <div class="card-body">
                         <h5 class="card-title text-center py-3 fw-bold">{{ $project->name }}</h5>
                         <p class="card-text">{{ $project->summary }}</p>

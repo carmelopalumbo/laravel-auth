@@ -6,7 +6,8 @@
             @include('admin.partials.aside')
             <div class="col-10">
                 <h2 class="text-center py-5 fw-bold">AGGIUNGI NUOVO PROGETTO</h2>
-                <form class="w-75 m-auto" action="{{ route('admin.projects.store') }}" method="POST">
+                <form class="w-75 m-auto" action="{{ route('admin.projects.store') }}" method="POST"
+                    enctype="multipart/form-data">
                     @csrf
                     <div class="mb-3">
                         <label for="name" class="form-label">NOME PROGETTO</label>
@@ -31,10 +32,9 @@
                         @enderror
                     </div>
                     <div class="mb-3">
-                        <label for="cover_image" class="form-label">URL COPERTINA</label>
-                        <input type="text" value="{{ old('cover_image') }}" name="cover_image"
-                            class="form-control @error('cover_image') is-invalid @enderror" id="cover_image"
-                            placeholder="URL immagine di copertina del progetto . . . ">
+                        <label for="cover_image" class="form-label">COPERTINA</label>
+                        <input type="file" value="{{ old('cover_image') }}" name="cover_image"
+                            class="form-control @error('cover_image') is-invalid @enderror" id="cover_image">
                         @error('cover_image')
                             <p class="error-message">
                                 {{ $message }}

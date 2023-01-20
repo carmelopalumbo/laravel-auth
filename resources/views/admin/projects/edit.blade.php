@@ -6,7 +6,8 @@
             @include('admin.partials.aside')
             <div class="col-10">
                 <h2 class="text-center py-5 fw-bold">MODIFICA PROGETTO</h2>
-                <form class="w-75 m-auto" action="{{ route('admin.projects.update', $project) }}" method="POST">
+                <form class="w-75 m-auto" action="{{ route('admin.projects.update', $project) }}" method="POST"
+                    enctype="multipart/form-data">
                     @csrf
                     @method('PUT')
                     <div class="mb-3">
@@ -33,10 +34,9 @@
                         @enderror
                     </div>
                     <div class="mb-3">
-                        <label for="cover_image" class="form-label">URL COPERTINA</label>
-                        <input type="text" name="cover_image" value="{{ old('cover_image') ?? $project->cover_image }}"
-                            class="form-control @error('cover_image') is-invalid @enderror" id="cover_image"
-                            placeholder="URL immagine di copertina del progetto . . . ">
+                        <label for="cover_image" class="form-label">COPERTINA</label>
+                        <input type="file" name="cover_image" value="{{ old('cover_image') ?? $project->cover_image }}"
+                            class="form-control @error('cover_image') is-invalid @enderror" id="cover_image">
                         @error('cover_image')
                             <p class="error-message">
                                 {{ $message }}
