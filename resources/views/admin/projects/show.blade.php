@@ -6,8 +6,14 @@
             @include('admin.partials.aside')
             <div class="col-10">
                 <div class="card m-auto mt-5" style="width: 30rem;">
-                    <img src="{{ asset('storage/' . $project->cover_image) }}" class="card-img-top thumb"
-                        alt="{{ $project->image_original_name }}">
+                    @if ($project->cover_image)
+                        <img src="{{ asset('storage/' . $project->cover_image) }}" class="card-img-top thumb"
+                            alt="{{ $project->image_original_name }}">
+                    @else
+                        <img src="{{ Vite::asset('resources/image/noimage.jpeg') }}" class="card-img-top thumb"
+                            alt="noimage">
+                    @endif
+
                     <div class="card-body">
                         <h5 class="card-title text-center py-3 fw-bold">{{ $project->name }}</h5>
                         <p class="card-text">{{ $project->summary }}</p>

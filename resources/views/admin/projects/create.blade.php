@@ -31,16 +31,25 @@
                             </p>
                         @enderror
                     </div>
-                    <div class="mb-3">
-                        <label for="cover_image" class="form-label">COPERTINA</label>
-                        <input type="file" value="{{ old('cover_image') }}" name="cover_image"
-                            class="form-control @error('cover_image') is-invalid @enderror" id="cover_image">
-                        @error('cover_image')
-                            <p class="error-message">
-                                {{ $message }}
-                            </p>
-                        @enderror
+
+                    <div class="d-flex justify-content-between">
+                        <div class="mb-3 w-75">
+                            <label for="cover_image" class="form-label">COPERTINA</label>
+                            <input onchange="showImage(event)" type="file" value="{{ old('cover_image') }}"
+                                name="cover_image" class="form-control @error('cover_image') is-invalid @enderror"
+                                id="cover_image">
+                            @error('cover_image')
+                                <p class="error-message">
+                                    {{ $message }}
+                                </p>
+                            @enderror
+                        </div>
+
+                        <div class="mt-2">
+                            <img width="100" id="preview" alt="">
+                        </div>
                     </div>
+
                     <div class="mb-3">
                         <label for="summary" class="form-label">SOMMARIO</label>
                         <textarea class="form-control @error('summary') is-invalid @enderror" name="summary" id="summary"
@@ -59,6 +68,9 @@
             </div>
         </div>
     </div>
+
+
+    @include('admin.projects.partials.preview-script')
 @endsection
 
 @section('title')
