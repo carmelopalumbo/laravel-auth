@@ -16,6 +16,18 @@
                     </li>
                 </ul>
 
+                <ul class="navbar-nav m-auto pt-2">
+                    <li class="nav-item cp-search">
+                        <form action="{{ route('admin.projects.index') }}" class="input-group mb-3" method="GET">
+                            @csrf
+                            <input name='search' type="text" class="form-control"
+                                placeholder="Cerca un progetto . . ." aria-label="Recipient's username"
+                                aria-describedby="button-addon2">
+                            <button class="btn btn-outline-secondary" type="submit" id="button-addon2">Cerca</button>
+                        </form>
+                    </li>
+                </ul>
+
                 <!-- Right Side Of Navbar -->
                 <ul class="navbar-nav ml-auto">
                     <!-- Authentication Links -->

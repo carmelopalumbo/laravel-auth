@@ -39,8 +39,20 @@
                                 </td>
                             </tr>
                         @empty
-                            <h4>Nessun progetto presente.</h4>
-                        @endforelse
+                    <tbody>
+                        <tr>
+                            <td class="fw-bold">
+                                Nessun progetto trovato.
+                            </td>
+                            <td class="fw-bold">
+                                N/D
+                            </td>
+                            <td class="fw-bold">
+                                N/D
+                            </td>
+                        </tr>
+                    </tbody>
+                    @endforelse
                     </tbody>
                 </table>
 

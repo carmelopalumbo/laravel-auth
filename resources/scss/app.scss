@@ -167,3 +167,28 @@ form{
         }
     }
 }
+
+.cp-search{
+    input{
+        width: 550px !important;
+        background-color: #212529;
+        border-color: #C52133;
+        &:focus{
+            background-color: #212529;
+            border-color: #C52133;
+            color: white;
+            font-style: italic;
+            box-shadow: none;
+        }
+
+        &::placeholder{
+            color: grey;
+            font-style: italic;
+        }
+    }
+    button{
+        border-color: #C52133;
+        color: #C52133;
+        font-weight: bold;
+    }
+}
