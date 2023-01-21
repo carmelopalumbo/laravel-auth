@@ -192,3 +192,8 @@ form{
         font-weight: bold;
     }
 }
+
+.ck-editor__editable[role="textbox"] {
+    /* editing area */
+    height: 200px;
+}

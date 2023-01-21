@@ -16,6 +16,11 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
+    <!-- CKEditor -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/ckeditor5/35.4.0/ckeditor.js'
+        integrity='sha512-nDvxc83NJ6VUAazr1a7tEjkVvP3XR900IgSk0ItAdMnPdSjsMkYdNBCSDm069Xg9K9JzvUZR3d++esL7yBA4oQ=='
+        crossorigin='anonymous'></script>
+
     <title>My Portfolio | @yield('title')</title>
 
     <!-- Vite -->

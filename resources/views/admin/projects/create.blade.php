@@ -51,7 +51,7 @@
 
                     <div class="mb-3">
                         <label for="summary" class="form-label">SOMMARIO</label>
-                        <textarea class="form-control @error('summary') is-invalid @enderror" name="summary" id="summary"
+                        <textarea id="editor" class="form-control @error('summary') is-invalid @enderror" name="summary" id="summary"
                             placeholder="Punti salienti del progetto . . ." rows="3">{{ old('summary') }}</textarea>
                         @error('summary')
                             <p class="error-message">
@@ -70,6 +70,7 @@
 
 
     @include('admin.projects.partials.preview-script')
+    @include('admin.projects.partials.editor-script')
 @endsection
 
 @section('title')
