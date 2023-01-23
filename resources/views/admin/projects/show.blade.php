@@ -21,7 +21,7 @@
 
                     <div class="card-body">
                         <h5 class="card-title text-center py-3 fw-bold">{{ $project->name }}</h5>
-                        <p class="card-text">{{ $project->summary }}</p>
+                        <p class="card-text">{!! $project->summary !!}</p>
                         <div class="d-flex justify-content-center py-3">
                             <a href="{{ route('admin.projects.edit', $project) }}"
                                 class="btn btn-warning mx-3 fw-bold">MODIFICA</a>
